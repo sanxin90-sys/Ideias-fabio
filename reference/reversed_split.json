@@ -1,0 +1,130 @@
+{
+ "dry": {
+  "test=last30%": {
+   "dry model": {
+    "daily_rmse": 3.237785291020061,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "SINDy 3 terms": {
+    "daily_rmse": 1.5398031183200351,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "polynomial 15 terms": {
+    "daily_rmse": 1.6111743814474975,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "sindy_minus_poly": {
+    "diff": -0.07137126312746234,
+    "ci95": [
+     -0.2501128066185646,
+     0.13198778695953453
+    ],
+    "n": 27
+   },
+   "coef_std": [
+    -0.20427078441882132,
+    0.6489628305466452,
+    0.2668082116506089
+   ],
+   "relax_time_h": 18.740599810689456
+  },
+  "test=first30%": {
+   "dry model": {
+    "daily_rmse": 4.012286143129936,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "SINDy 3 terms": {
+    "daily_rmse": 1.2518985618123173,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "polynomial 15 terms": {
+    "daily_rmse": 2.3728002311297858,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "sindy_minus_poly": {
+    "diff": -1.1209016693174685,
+    "ci95": [
+     -2.4178986662447204,
+     0.08480286263686525
+    ],
+    "n": 27
+   },
+   "coef_std": [
+    -0.19422507429829347,
+    0.6152406222067399,
+    0.19957784655943125
+   ],
+   "relax_time_h": 18.77419848224589
+  }
+ },
+ "wet": {
+  "test=last30%": {
+   "dry model": {
+    "daily_rmse": 2.4573621952132845,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "SINDy 3 terms": {
+    "daily_rmse": 0.9780758152955895,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "polynomial 15 terms": {
+    "daily_rmse": 1.0158680583117892,
+    "diverged": 1,
+    "n_days": 27
+   },
+   "sindy_minus_poly": {
+    "diff": -0.030295590751610257,
+    "ci95": [
+     -0.1543418680356099,
+     0.1007768759342735
+    ],
+    "n": 26
+   },
+   "coef_std": [
+    -0.16130736381345095,
+    0.737507894329725,
+    0.4074099896492595
+   ],
+   "relax_time_h": 13.670732644085106
+  },
+  "test=first30%": {
+   "dry model": {
+    "daily_rmse": 2.454847150280739,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "SINDy 3 terms": {
+    "daily_rmse": 1.013951699542084,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "polynomial 15 terms": {
+    "daily_rmse": 1.011128598660299,
+    "diverged": 0,
+    "n_days": 27
+   },
+   "sindy_minus_poly": {
+    "diff": 0.0028231008817851677,
+    "ci95": [
+     -0.10188424072858425,
+     0.1099902496687232
+    ],
+    "n": 27
+   },
+   "coef_std": [
+    -0.15286268786239507,
+    0.7350580617647364,
+    0.3982637904102962
+   ],
+   "relax_time_h": 14.277550371256584
+  }
+ }
+}
