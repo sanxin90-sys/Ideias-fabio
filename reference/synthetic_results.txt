@@ -1,0 +1,37 @@
+a=2.849e-03 g=5.004e-11  T range 293.5-302.9 K, std(s_true)=0.255 K/h, std(dT/dt)=0.664 K/h
+true support (|coef| > threshold): ['th', 'th*r']
+
+[A] Library conditioning (noise 0.1 K, Savitzky-Golay derivative)
+  cond(raw T,R degree 4) = 3.7e+19; cond(standardised degree 3) = 2.8e+01
+  raw library: 2 active terms of 15: 1=3.15e+01, T=-1.06e-01
+  standardised library: 1=+0.059, th=-0.229, r=+0.072, th*r=-0.061, r*r=-0.039, th*th*r=-0.062, th*r*r=+0.042, r*r*r=-0.022 | true: 1=+0.013, th=-0.238, r=+0.004, th*r=-0.080
+  standardised: sim RMSE=0.115 K, true+=2/2, false+=6, coef err=0.49
+
+[B] Derivative strategy vs measurement noise (5 seeds; mean over seeds)
+  noise  method   simRMSE(K)  true+/2  false+  coefErr
+  0.05  fd          0.112    2.0    0.0   0.05
+  0.05  savgol      0.117    2.0    6.0   0.49
+  0.05  savgol_both     0.086    2.0    5.0   0.34
+  0.05  spline      0.159    2.0    5.0   0.93
+  0.05  kalman      0.113    2.0    0.0   0.05
+  0.05  weak        0.087    2.0    0.0   0.07
+  0.15  fd          0.100    2.0    1.0   0.09
+  0.15  savgol      0.116    2.0    5.4   0.49
+  0.15  savgol_both     0.086    2.0    5.0   0.34
+  0.15  spline      0.111    2.0    8.0   0.85
+  0.15  kalman      0.105    2.0    1.2   0.14
+  0.15  weak        0.088    2.0    0.0   0.07
+  0.30  fd          0.095    2.0    3.8   0.27
+  0.30  savgol      0.128    2.0    6.6   0.61
+  0.30  savgol_both     0.092    2.0    4.2   0.31
+  0.30  spline      0.098    2.0    2.4   0.18
+  0.30  kalman      0.090    2.0    7.0   0.54
+  0.30  weak        0.089    2.0    0.0   0.07
+  (total-variation derivative, 1 seed, noise 0.15 K)
+  0.15  tv(a=0.0001)    2.529      1      8   3.24
+  0.15  tv(a=0.001)    2.519      1      8   3.24
+
+[C] Identifiability: refit the correction with (a, g) scaled by k along the valley
+  k=0.5: correction = 1=+0.021, th=-0.244, r=+0.372, th*r=-0.081 | sim RMSE=0.006 K
+  k=1.0: correction = th=-0.238, th*r=-0.071 | sim RMSE=0.088 K
+  k=1.5: correction = th=-0.232, r=-0.368, th*r=-0.077 | sim RMSE=0.032 K

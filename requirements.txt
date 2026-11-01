@@ -1,0 +1,17 @@
+# Steps 01-06 and 09.
+# Verified on 2026-10-30 with Python 3.13.17, numpy 2.5.4, scipy 1.18.1, pandas 3.1.0,
+# openpyxl 3.1.5, scikit-learn 1.9.1, matplotlib 3.11.2.
+numpy
+scipy
+pandas
+openpyxl
+scikit-learn
+matplotlib
+
+# Step 07 (diagnostics) only. Verified with jax 0.12.0.1, optax 0.2.8, pysindy 2.1.0 (see VERIFICATION.md).
+jax
+optax
+pysindy
+
+# Step 08 (PySR) only: install on your own computer; the first run downloads Julia.
+# pip install "pysr>=0.19" "pynumdiff>=0.3" sympy
